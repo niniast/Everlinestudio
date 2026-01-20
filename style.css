@@ -80,6 +80,12 @@ header {
     transition: all 0.3s ease;
     margin-top: 50px;
 }
+.cta-btn:hover,
+.cta-btn:focus-visible {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-color: var(--text-color);
+}
 
 /* --- Section with Grid --- */
 .section {
@@ -181,21 +187,21 @@ header {
   align-items: start;
 }
 .projects-grid img{
-      width: 100%;
-  max-width: 320px;
+  width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border: 2px solid var(--border-color);
   padding: 10px;             
   background: var(--background-color);
   display: block;
-  margin: 0 ;  
+  margin: 0;
 }
 .project-name{
   margin-top: 10px;
   font-size: 12px;
 }
-.project:nth-child(2){
+/* Modifier for a staggered grid effect */
+.project--offset-top {
   margin-top: 60px;
 }
 .project-number{
@@ -203,4 +209,27 @@ header {
   font-size: 12px;
   letter-spacing: 1px;
   margin-bottom: 12px;
+}
+
+
+
+/* ✅ MOBILE FIXES (max-width) */
+@media (max-width: 767px){
+  .nav-image img{
+    width: 100px;
+    height: 100px;
+  }
+  .section {
+    /* Stack grid items vertically on mobile */
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .center {
+    /* Hide the vertical text bar on mobile for simplicity */
+    display: none;
+  }
+  .spacer-image {
+    /* Hide decorative spacer on mobile */
+    display: none;
+  }
 }
