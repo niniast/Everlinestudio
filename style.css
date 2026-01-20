@@ -1,25 +1,35 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: yellowgreen;
+    --text-color: #000;
+    --border-color: #000;
+    --background-color: #fff;
+    --main-font: "Inter Tight", sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, sans-serif;
+     font-family: var(--main-font);
 }
 .container {
-    width: min(1000px, 90%);
+    width: min(1500px, 90%);
     margin: 20px auto 0;
 }
+/* --- Header --- */
 header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: yellowgreen;
+    background-color: var(--primary-color);
 }
 .logo {
     font-size: 14px;
     letter-spacing: 1px;
-    color: black;
+    color: var(--text-color);
     padding: 10px;
 }
 .nav-image {
@@ -33,45 +43,50 @@ header {
     right: 7px;
     font-size: 12px;
     letter-spacing: 1px;
-    color: #000;
+    color: var(--text-color);
     z-index: 2;
 }
 .nav-image img {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+  top: 0;
+  right: 0;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     clip-path: circle(60% at 70% 30%);
 }
+/* --- Main Content / Hero --- */
 .main {
     padding-left: 70px;
-    min-height: 50vh;
-    background-color: yellowgreen;
+    min-height: 40vh;
+    background-color: var(--primary-color);
 }
 .main h1 {
     font-size: clamp(40px, 10vw, 80px);
 }
 .main p {
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.4; 
     margin-top: 20px;
 }
 .cta-btn {
-    background: transparent; /*გამჭირვალე*/
-    border: 1px solid #000;
+    background: transparent;
+    border: 1px solid var(--border-color);
     padding: 18px 30px;
-    border-radius: 999px; /* ოვალური ფორმა */
+    border-radius: 999px; 
     font-size: 12px;
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
+/* --- Section with Grid --- */
 .section {
     display: grid;
     grid-template-columns: 1fr 70px 1fr 0.5fr;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     min-height: 90vh;
     align-items: stretch;
 }
@@ -82,12 +97,11 @@ header {
     display: block;
 }
 .center {
-    background-color: yellowgreen;
+    background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    justify-content: space-evenly;
 }
 .center p {
     transform: rotate(-90deg);
@@ -99,7 +113,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 24px; /* სათაურსა და ტექსტს შორის */
+    gap: 24px; 
     padding: 80px;
 }
 .right-side h2 {
@@ -118,11 +132,75 @@ header {
 .spacer-image {
     padding: 80px;
     display: flex;
-    align-items: flex-end; /* ქვემოთ */
-    justify-content: flex-end; /* მარჯვნივ */
+    align-items: flex-end; 
+    justify-content: flex-end; 
 }
 .spacer-image img {
-    width: 140px;
+    width: 200px;
     height: auto;
     display: block;
+}
+/* --- Text Section --- */
+.text-section{ 
+    display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+  height: 50vh;
+}
+.text-section h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.text-section p{
+    font-size: 15px;
+    max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.4;
+  font-style: italic;
+}
+/* --- Projects Section --- */
+.projects{    
+  padding: 80px 0;
+}
+.projects-title{ 
+  text-align:center;
+  font-size: 64px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 30px;
+}
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+  align-items: start;
+}
+.projects-grid img{
+      width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  padding: 10px;             
+  background: var(--background-color);
+  display: block;
+  margin: 0 ;  
+}
+.project-name{
+  margin-top: 10px;
+  font-size: 12px;
+}
+.project:nth-child(2){
+  margin-top: 60px;
+}
+.project-number{
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
