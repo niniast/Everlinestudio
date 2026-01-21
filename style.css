@@ -80,6 +80,7 @@ header {
     transition: all 0.3s ease;
     margin-top: 50px;
 }
+
 .cta-btn:hover,
 .cta-btn:focus-visible {
     background-color: var(--text-color);
@@ -210,15 +211,15 @@ header {
     letter-spacing: 1px;
     margin-bottom: 12px;
 }
-/*
+
 @media (max-width: 768px) {
-  /* --- Container --- 
+   /* --- Container --- */
   .container {
     width: 92%;
     margin: 16px auto 0;
   }
 
-  /* --- Header --- 
+   /* --- Header --- */
   header {
     align-items: center;
   }
@@ -248,9 +249,9 @@ header {
     clip-path: circle(58% at 70% 30%);
   }
 
-  /* --- Main / Hero --- 
+  /* --- Main / Hero --- */
   .main {
-    padding-left: 24px;   /* desktop 70px -> შემცირება 
+    padding-left: 24px;    /* desktop 70px -> შემცირება */
     padding-right: 12px;
     padding-top: 20px;
     padding-bottom: 28px;
@@ -269,13 +270,13 @@ header {
 }
 
 @media (max-width: 480px) {
-  /* --- Global / container --- 
+  /* --- Global / container --- */
   .container {
     width: 92%;
     margin: 12px auto 0;
   }
 
-  /* --- Header --- 
+   /* --- Header --- */
   header {
     align-items: center;
   }
@@ -285,7 +286,7 @@ header {
     padding: 10px 8px;
   }
 
-  /* წრიული ფოტო აღარ უნდა “გაიწიოს” გარეთ 
+   /* წრიული ფოტო აღარ უნდა “გაიწიოს” გარეთ */
   .nav-image {
     width: 96px;
     height: 96px;
@@ -306,14 +307,14 @@ header {
     clip-path: circle(55% at 72% 28%);
   }
 
-  /* --- Main / Hero --- 
+   /* --- Main / Hero --- */
   .main {
     padding: 24px 12px 28px;
     min-height: auto;
   }
 
   .main h1 {
-    font-size: 36px; /* clamp-ის ნაცვლად მობილურზე ჩასაკეტი 
+    font-size: 36px; /* clamp-ის ნაცვლად მობილურზე ჩასაკეტი */
     line-height: 1.05;
   }
 
@@ -331,18 +332,18 @@ header {
     max-width: 320px;
   }
 
-  /* --- Section grid (4 სვეტი -> 1 სვეტი) --- 
+   /* --- Section grid (4 სვეტი -> 1 სვეტი) --- */
   .section {
     grid-template-columns: 1fr;
     min-height: auto;
   }
 
-  /* სურათი ზედა ნაწილში 
+   /* სურათი ზედა ნაწილში */
   .left-side img {
     height: 370px;
   }
 
-  /* center (მწვანე ბარი) ახლა ჰორიზონტალურად 
+   /* center (მწვანე ბარი) ახლა ჰორიზონტალურად */
   .center {
     padding: 14px 12px;
   }
@@ -380,7 +381,7 @@ header {
     width: 140px;
   }
 
-  /* --- Text section --- 
+   /* --- Text section --- */
   .text-section {
     height: auto;
     padding: 40px 12px;
@@ -396,14 +397,14 @@ header {
     max-width: 38ch;
   }
 
-  /* --- Projects --- 
+   /* --- Projects --- */
   .projects {
     padding: 42px 0;
   }
 
   .projects-title {
     font-size: 32px;
-    white-space: normal; /* nowrap აქ ტეხავს მობილურს 
+    white-space: normal;  /* nowrap აქ ტეხავს მობილურს */
     overflow: visible;
     text-overflow: unset;
     margin-bottom: 18px;
@@ -421,7 +422,7 @@ header {
   }
 
   .project--offset-top {
-    margin-top: 0; /* stagger effect off on mobile 
+    margin-top: 0;  /* stagger effect off on mobile */
   }
 
   .project-number,
@@ -429,15 +430,9 @@ header {
     font-size: 11px;
   }
 
-  /* --- Safety: თუ მაინც გამოჩნდა ჰორიზონტალური სქროლი --- 
+   /* --- Safety: თუ მაინც გამოჩნდა ჰორიზონტალური სქროლი --- */
   html,
   body {
     overflow-x: hidden;
   }
-}
-*/
-
-@media screen {max-width: 768px} {
-;
-  
 }
